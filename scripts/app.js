@@ -1,10 +1,6 @@
-requirejs.config({
-  baseUrl: "scripts/",
-});
-
-// Start the main app logic.
-requirejs(["lodash"], function (lodash) {
-  document.getElementById("header").textContent = lodash.upperCase(
-    "hello world"
-  );
+document.addEventListener("DOMContentLoaded", function () {
+  requirejs(["lodash"], function (lodash) {
+    const headerEl = document.getElementById("header");
+    headerEl.textContent = lodash.upperCase("hello world");
+  });
 });
